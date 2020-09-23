@@ -10,9 +10,6 @@ export default {
   name: 'App',
   components: {
     X6Editor
-  },
-  mounted () {
-    this.abc()
   }
 }
 </script>
