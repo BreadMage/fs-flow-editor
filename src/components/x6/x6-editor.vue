@@ -14,9 +14,8 @@ export default {
     const graph = new Graph({
       container: document.getElementById('x6-container'),
       grid: {
-        size: 20,
-        visible: true,
-        type: 'dot'
+        size: 1,
+        visible: false
       },
       snapline: {
         enabled: true
@@ -31,17 +30,45 @@ export default {
       },
       keyboard: {
         enabled: true
+      },
+      connecting: {
+        dangling: true,
+        snap: true,
+        router: {
+          name: 'normal'
+        },
+        connector: {
+          name: 'smooth'
+        }
       }
+    })
+    graph.on('edge:mouseenter', ({ cell }) => {
+      cell.addTools([
+        {
+          name: 'vertices',
+          args: {
+            snapRadius: 0,
+            stopPropagation: false
+          }
+        },
+        { name: 'source-arrowhead' },
+        { name: 'target-arrowhead' }
+      ])
+    })
+    graph.on('edge:mouseleave', ({ cell }) => {
+      cell.removeTools()
     })
 
     const stencil = new Addon.Stencil({
-      groups: [
-        { name: 'group1', title: '块', graphHeight: 200 },
-        { name: 'group1', title: '服务器' }
-      ],
+      groups: [{ name: 'group1', title: '服务器' }],
+      layoutOptions: {
+        columns: 1,
+        columnWidth: 200,
+        rowHeight: 100,
+        dx: 0
+      },
       target: graph,
       title: '测试测试',
-      search: true,
       stencilGraphWidth: 200,
       stencilGraphHeight: 500
     })

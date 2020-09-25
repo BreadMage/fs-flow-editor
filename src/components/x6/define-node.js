@@ -1,8 +1,8 @@
 import { Shape } from '@antv/x6'
 
 Shape.Rect.config({
-  width: 80,
-  height: 40,
+  width: 160,
+  height: 80,
   attrs: {
     body: {
       fill: '#adc6ff',
@@ -14,52 +14,16 @@ Shape.Rect.config({
   ports: {
     groups: {
       group1: {
-        position: 'top',
-        attrs: {
-          circle: {
-            r: 4,
-            magnet: true,
-            stroke: '#2f54eb',
-            strokeWidth: 2,
-            fill: '#fff'
-          }
-        }
+        position: 'top'
       },
       group2: {
-        position: 'right',
-        attrs: {
-          circle: {
-            r: 4,
-            magnet: true,
-            stroke: '#2f54eb',
-            strokeWidth: 2,
-            fill: '#fff'
-          }
-        }
+        position: 'right'
       },
       group3: {
-        position: 'bottom',
-        attrs: {
-          circle: {
-            r: 4,
-            magnet: true,
-            stroke: '#2f54eb',
-            strokeWidth: 2,
-            fill: '#fff'
-          }
-        }
+        position: 'bottom'
       },
       group4: {
-        position: 'left',
-        attrs: {
-          circle: {
-            r: 4,
-            magnet: true,
-            stroke: '#2f54eb',
-            strokeWidth: 2,
-            fill: '#fff'
-          }
-        }
+        position: 'left'
       }
     },
     items: [
@@ -80,12 +44,25 @@ Shape.Rect.config({
         group: 'group4' // 指定分组名称
       }
     ]
-  }
+  },
+  portMarkup: [
+    {
+      tagName: 'circle',
+      selector: 'portBody',
+      attrs: {
+        r: 4,
+        magnet: true,
+        stroke: '#2f54eb',
+        strokeWidth: 2,
+        fill: '#fff'
+      }
+    }
+  ]
 })
 
 Shape.Circle.config({
-  width: 40,
-  height: 40,
+  width: 80,
+  height: 80,
   attrs: {
     body: {
       fill: '#ffe58f',
@@ -97,52 +74,16 @@ Shape.Circle.config({
   ports: {
     groups: {
       group1: {
-        position: 'top',
-        attrs: {
-          circle: {
-            r: 4,
-            magnet: true,
-            stroke: '#faad14',
-            strokeWidth: 2,
-            fill: '#fff'
-          }
-        }
+        position: 'top'
       },
       group2: {
-        position: 'right',
-        attrs: {
-          circle: {
-            r: 4,
-            magnet: true,
-            stroke: '#faad14',
-            strokeWidth: 2,
-            fill: '#fff'
-          }
-        }
+        position: 'right'
       },
       group3: {
-        position: 'bottom',
-        attrs: {
-          circle: {
-            r: 4,
-            magnet: true,
-            stroke: '#faad14',
-            strokeWidth: 2,
-            fill: '#fff'
-          }
-        }
+        position: 'bottom'
       },
       group4: {
-        position: 'left',
-        attrs: {
-          circle: {
-            r: 4,
-            magnet: true,
-            stroke: '#faad14',
-            strokeWidth: 2,
-            fill: '#fff'
-          }
-        }
+        position: 'left'
       }
     },
     items: [
@@ -163,12 +104,25 @@ Shape.Circle.config({
         group: 'group4' // 指定分组名称
       }
     ]
-  }
+  },
+  portMarkup: [
+    {
+      tagName: 'circle',
+      selector: 'portBody',
+      attrs: {
+        r: 4,
+        magnet: true,
+        stroke: '#faad14',
+        strokeWidth: 2,
+        fill: '#fff'
+      }
+    }
+  ]
 })
 
 Shape.Ellipse.config({
-  width: 80,
-  height: 40,
+  width: 160,
+  height: 80,
   attrs: {
     body: {
       fill: '#b7eb8f',
@@ -180,52 +134,16 @@ Shape.Ellipse.config({
   ports: {
     groups: {
       group1: {
-        position: 'top',
-        attrs: {
-          circle: {
-            r: 4,
-            magnet: true,
-            stroke: '#52c41a',
-            strokeWidth: 2,
-            fill: '#fff'
-          }
-        }
+        position: 'top'
       },
       group2: {
-        position: 'right',
-        attrs: {
-          circle: {
-            r: 4,
-            magnet: true,
-            stroke: '#52c41a',
-            strokeWidth: 2,
-            fill: '#fff'
-          }
-        }
+        position: 'right'
       },
       group3: {
-        position: 'bottom',
-        attrs: {
-          circle: {
-            r: 4,
-            magnet: true,
-            stroke: '#52c41a',
-            strokeWidth: 2,
-            fill: '#fff'
-          }
-        }
+        position: 'bottom'
       },
       group4: {
-        position: 'left',
-        attrs: {
-          circle: {
-            r: 4,
-            magnet: true,
-            stroke: '#52c41a',
-            strokeWidth: 2,
-            fill: '#fff'
-          }
-        }
+        position: 'left'
       }
     },
     items: [
@@ -246,5 +164,18 @@ Shape.Ellipse.config({
         group: 'group4' // 指定分组名称
       }
     ]
-  }
+  },
+  portMarkup: [
+    {
+      tagName: 'circle',
+      selector: 'portBody',
+      attrs: {
+        r: 4,
+        magnet: true,
+        stroke: '#52c41a',
+        strokeWidth: 2,
+        fill: '#fff'
+      }
+    }
+  ]
 })
